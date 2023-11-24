@@ -8,7 +8,7 @@ public class App {
         String templateFileName = "template.ftl";
         Map<String, Object> data = Map.of(
                 "nameParameter", "Tamás Velencei",
-                "repositoryUrl", "http://example.com",
+                "repositoryUrl", "https://github.com/tomasvelencei/fluenthtmlgenerator",
                 "emailParameter", "tomas.velencei@gmail.com"
         );
 
@@ -29,7 +29,7 @@ public class App {
                 .addLink("L&P Solutions", "http://lpsolutions.hu")
                 .endBody()
                 .endDocument()
-                .saveToFile(templateFileName)  // Save as an FTl file, not HTML
+                .saveToFile(templateFileName)
                 .saveHtmlWithData(templateFileName, "output.html", data)
                 .deleteTemplateFile(templateFileName);
     }
